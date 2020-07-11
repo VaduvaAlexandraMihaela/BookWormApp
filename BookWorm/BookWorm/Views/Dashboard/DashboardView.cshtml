@@ -1,0 +1,60 @@
+﻿@model DashboardViewModel
+@{
+    ViewData["Title"] = "DashboardView";
+}
+
+    <div class="site-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 single-content">
+                    @foreach (var item in Model.Reviews)
+                    {
+                        <h1 class="mb-4">
+                            @Html.DisplayFor(model => item.Title)
+                        </h1>
+                        <div class="post-meta d-flex mb-5">
+                            <div class="vcard">
+                                <span class="d-block">>@Html.DisplayFor(model => item.User.FirstName)</span>
+                            </div>
+                        </div>
+
+                        <p>@Html.DisplayFor(model => item.Text) </p>
+
+                        @foreach (var item1 in Model.Comments)
+                        {
+                            if (item1.Review == item)
+                            {
+                                <div class="pt-5">
+                                    <ul class="comment-list">
+                                        <li class="comment">
+                                            <div class="comment-body">
+                                                <h3>@Html.DisplayFor(model => item1.User.FirstName)</h3>
+                                                <p>@Html.DisplayFor(model => item1.Text)</p>
+
+                                            </div>
+                                        </li>
+
+
+
+
+                                    </ul>
+
+
+
+
+                                </div>
+                            }
+                           
+                        }
+                        <div class="section-title">
+                            <h2 class="mb-5"><a asp-action="AddComment">Leave a comment</a></h2>
+                        </div>
+                    }
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+

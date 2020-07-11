@@ -1,0 +1,33 @@
+﻿@model AddReviewViewModel
+
+@{ 
+    ViewData["Title"] = "AddReview";
+}
+
+
+<form asp-action="AddReview" method="post">
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label for="text">Review Title</label>
+            <input type="text" class="form-control form-control-lg" asp-for="Title" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label for="text">Book Name</label>
+            <input type="text" class="form-control form-control-lg" asp-for="bookName" />
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="lname">Author Name</label>
+            <input type="text" id="lname" class="form-control form-control-lg" asp-for="authorName" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="message">Write Review</label>
+        <textarea cols="30" rows="10" class="form-control" asp-for="text"></textarea>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Post Review" class="btn btn-primary py-3">
+    </div>
+</form>

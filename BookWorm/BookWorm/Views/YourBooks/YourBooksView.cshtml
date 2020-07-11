@@ -1,0 +1,84 @@
+﻿@model YourBooksViewModel
+@{
+    ViewData["Title"] = "YourBooksView";
+}
+
+
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h2>Your books</h2>
+                        </div>
+                    </div>
+                </div>
+                @foreach (var item in Model.Books)
+                {
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="post-entry-2 d-flex bg-light">
+                                <div class="contents">
+                                    <h2><a>@Html.DisplayFor(model => item.Name)</a></h2>
+                                </div>
+                                <div class="contents">
+                                    <h2><a asp-action="DeleteBook" asp-route-id="@item.Id">Delete Book</a></h2>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                }
+
+                <div class="section-title">
+                    <label for="fname"><a href='@Url.Action("AddBook","YourBooks")'>Add Book</a></label>
+                    <div class="col-lg-6">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="section-title">
+                    <h2>Your reviews</h2>
+                </div>
+                @foreach (var item1 in Model.Reviews)
+                {
+                <div class="trend-entry d-flex">
+                    <div class="trend-contents">
+                        <h2><a>@Html.DisplayFor(model => item1.Title)</a></h2>
+                        <div class="post-meta">
+                            <span class="d-block">@Html.DisplayFor(model => item1.Book.Name)</span>
+                        </div>
+                    </div>
+                </div>
+                }
+
+                <p>
+                    <a href='@Url.Action("AllReviews","YourBooks")' class="more">See All Reviews</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row">
+
+            <div class="section-title">
+                <h2 class="mb-5"><a href='@Url.Action("AddReview","Dashboard")'>Write review</a></h2>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+

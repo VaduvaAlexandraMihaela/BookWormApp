@@ -1,0 +1,58 @@
+﻿@model SearchUsersViewModel
+@{
+    ViewData["Title"] = "SearchUser";
+}
+
+<h1>SearchUser</h1>
+
+
+   
+<div class="col-lg-8">
+   
+    <div class="row">
+        @using (Html.BeginForm("SearchUser", "SearchUsers", FormMethod.Get))
+        {
+            <div class="section-title">
+                <h2 class="mb-5">Search User</h2>
+            </div>
+            <form class="p-5 bg-light">
+                <div class="form-group">
+                    <label for="message">User Name</label>
+                    <input type="text" id="userName" class="form-control form-control-lg" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Search User" class="btn btn-primary py-3">
+                </div>
+
+            </form>
+        }
+            <div class="col-12">
+                <div class="section-title">
+                    <h2>All Users Found</h2>
+                </div>
+            </div>
+        </div>
+    
+    <div class="row">
+
+        @foreach (var item in Model.Users)
+        {
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="post-entry-2 d-flex bg-light">
+                        <div class="contents">
+                            <h2><a>@Html.DisplayFor(model => item.FirstName)</a></h2>
+                            <h2><a>@Html.DisplayFor(model => item.LastName)</a></h2>
+                            <a asp-action="AddFollower" asp-route-id="@item.Id">Follow User</a>
+                            <a asp-action="ProfileFollower" asp-route-id="@item.FirstName">View Profile</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        }
+    </div>
+   
+</div>

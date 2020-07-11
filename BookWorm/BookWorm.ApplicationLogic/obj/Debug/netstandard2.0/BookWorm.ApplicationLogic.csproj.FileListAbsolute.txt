@@ -1,0 +1,9 @@
+D:\Facultate\WAD Proiect\BookWorm\BookWorm.ApplicationLogic\bin\Debug\netstandard2.0\BookWorm.ApplicationLogic.deps.json
+D:\Facultate\WAD Proiect\BookWorm\BookWorm.ApplicationLogic\bin\Debug\netstandard2.0\BookWorm.ApplicationLogic.dll
+D:\Facultate\WAD Proiect\BookWorm\BookWorm.ApplicationLogic\bin\Debug\netstandard2.0\BookWorm.ApplicationLogic.pdb
+D:\Facultate\WAD Proiect\BookWorm\BookWorm.ApplicationLogic\obj\Debug\netstandard2.0\BookWorm.ApplicationLogic.csprojAssemblyReference.cache
+D:\Facultate\WAD Proiect\BookWorm\BookWorm.ApplicationLogic\obj\Debug\netstandard2.0\BookWorm.ApplicationLogic.AssemblyInfoInputs.cache
+D:\Facultate\WAD Proiect\BookWorm\BookWorm.ApplicationLogic\obj\Debug\netstandard2.0\BookWorm.ApplicationLogic.AssemblyInfo.cs
+D:\Facultate\WAD Proiect\BookWorm\BookWorm.ApplicationLogic\obj\Debug\netstandard2.0\BookWorm.ApplicationLogic.dll
+D:\Facultate\WAD Proiect\BookWorm\BookWorm.ApplicationLogic\obj\Debug\netstandard2.0\BookWorm.ApplicationLogic.pdb
+D:\Facultate\WAD Proiect\BookWorm\BookWorm.ApplicationLogic\obj\Debug\netstandard2.0\BookWorm.ApplicationLogic.csproj.CoreCompileInputs.cache

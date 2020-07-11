@@ -1,0 +1,20 @@
+﻿@model AddFollowerViewModel
+@{
+    ViewData["Title"] = "AddFollower";
+}
+
+
+
+<div>
+
+    <form asp-action="AddFollower">
+
+        <input type="hidden" asp-for="id" />
+
+        <input type="submit" value="Follow" class="btn btn-default" />
+
+        <a asp-action="SearchUser">Back</a>
+
+    </form>
+
+</div>

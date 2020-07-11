@@ -1,0 +1,34 @@
+﻿@model GetAllReviewsViewModel
+@{
+    ViewData["Title"] = "AllReviews";
+}
+
+@foreach (var item in Model.Reviews)
+{
+    <div class="site-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-left">
+                    <div class="section-title mb-5">
+                        <h2>@Html.DisplayFor(model =>item.Title)</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>
+                        
+                    </p>
+                </div>
+                <div class="col-lg-6 pl-md-5">
+                    <p>@Html.DisplayFor(model => item.Text)</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-left">
+                    <a asp-action="DeleteReview" asp-route-id="@item.Id" asp-controller="Dashboard">Delete Review</a>
+                </div>
+                </div>
+            </div>
+    </div>
+}

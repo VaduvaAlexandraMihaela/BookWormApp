@@ -1,0 +1,24 @@
+﻿@model AddCommentViewModel
+ @{ 
+     ViewData["Index"] = "AddComment";
+ }
+
+    
+        <div class="section-title">
+            <h2 class="mb-5">Leave a comment</h2>
+        </div>
+        <form action="#" class="p-5 bg-light">
+            <div class="form-group">
+                <label for="message">Comment</label>
+                <textarea id="message" cols="30" rows="10" class="form-control" asp-for="text"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="text">Review Title</label>
+                <input type="text" class="form-control form-control-lg" asp-for="reviewTitle" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Post Comment" class="btn btn-primary py-3">
+            </div>
+
+        </form>
+    
